@@ -484,6 +484,10 @@ def test_audit_rsna_pipeline_on_project_files():
     """Verify audit_rsna_pipeline passes on the actual project metadata and manifests."""
     from src.config import RSNA_DICOM_DIR, RSNA_METADATA_DIR, RSNA_PROCESSED_DIR
 
+    mapping_file = RSNA_METADATA_DIR / "pneumonia-challenge-dataset-mappings_2018.json"
+    if not mapping_file.is_file() or not RSNA_DICOM_DIR.is_dir():
+        pytest.skip("RSNA metadata or local DICOM files not present on disk.")
+
     report = audit_rsna_pipeline(
         metadata_dir=RSNA_METADATA_DIR,
         dicom_dir=RSNA_DICOM_DIR,
@@ -578,6 +582,10 @@ def test_validate_local_dicoms_healthy_and_corrupt(tmp_path: Path):
 def test_audit_rsna_pipeline_multi_tier_statuses():
     """Verify audit_rsna_pipeline returns structured 5-tier status reports accurately."""
     from src.config import RSNA_DICOM_DIR, RSNA_METADATA_DIR, RSNA_PROCESSED_DIR
+
+    mapping_file = RSNA_METADATA_DIR / "pneumonia-challenge-dataset-mappings_2018.json"
+    if not mapping_file.is_file() or not RSNA_DICOM_DIR.is_dir():
+        pytest.skip("RSNA metadata or local DICOM files not present on disk.")
 
     report = audit_rsna_pipeline(
         metadata_dir=RSNA_METADATA_DIR,
