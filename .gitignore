@@ -82,3 +82,7 @@ outputs/plots/*.pdf
 !outputs/reports/.gitkeep
 !outputs/plots/.gitkeep
 !outputs/README.md
+
+# Personal screenshots and local captures (excluded from repository)
+*01_github_repository*
+
