@@ -1,30 +1,24 @@
-# Technical Documentation Hub
-## AI-Powered Medical Image Analysis System
+# Technical Documentation Repository
 
-Welcome to the central technical documentation repository for the **AI-Powered Medical Image Analysis System**. This folder contains detailed, structured documentation covering every technical facet of the system's lifecycle—from architectural blueprints and data pipelines to deep learning algorithms, validation frameworks, and execution progress logs.
+Welcome to the central technical documentation hub for the AI-Powered Medical Image Analysis System. This directory hosts formal technical specifications, model cards, dataset governance documentation, and presentation materials.
 
 ---
 
-## 📁 Documentation Structure
+## Technical Documentation Inventory
 
-| Document | Purpose & Scope |
+| Document | Primary Scope and Technical Content |
 | :--- | :--- |
-| **[`architecture.md`](./architecture.md)** | Modular system architecture, data layer, MobileNetV2 baseline, and CLI subcommands. |
-| **[`dataset_card.md`](./dataset_card.md)** | Pediatric cohort context, Kermany et al. citation, class split distributions, and biases. |
-| **[`model_card.md`](./model_card.md)** | MobileNetV2 specifications, intended use, screening metrics, and calibration caveats. |
-| **[`limitations.md`](./limitations.md)** | In-depth clinical, algorithmic, Grad-CAM, and prevalence shift limitations. |
-| **[`system_architecture.md`](./system_architecture.md)** | End-to-end system design, component diagrams, inference workflows, and technological stack. |
-| **[`data_flow.md`](./data_flow.md)** | Ingestion pathways (DICOM/NIfTI/PNG), preprocessing, tensor transformations, and output formatting. |
-| **[`module_specifications.md`](./module_specifications.md)** | Granular breakdown of each module, class interfaces, responsibilities, and interactions. |
-| **[`model_learning_and_training.md`](./model_learning_and_training.md)** | Neural network topologies, loss formulations, optimization strategies, backpropagation, and metrics. |
-| **[`dataset_specifications.md`](./dataset_specifications.md)** | Dataset profiles, source provenance, class distributions, preprocessing protocols, and partitions. |
-| **[`verification_and_testing.md`](./verification_and_testing.md)** | Testing methodologies, unit/integration test suites, and clinical validation benchmarks. |
-| **[`implementation_progress_log.md`](./implementation_progress_log.md)** | Chronological log of all code and features implemented, complete with verification artifacts. |
+| [`architecture.md`](./architecture.md) | Modular system architecture, data layers, MobileNetV2 baseline, patient-level splitting flow, and memory-safe streaming design. |
+| [`dataset_card.md`](./dataset_card.md) | RSNA 2018 adjudicated cohort provenance, 30,000 mapping records, 29,684 valid cohort, exclusion criteria, class distributions, and HIPAA de-identification. |
+| [`model_card.md`](./model_card.md) | MobileNetV2 architecture specifications, training hyperparameters, held-out test benchmarks (AUROC 0.8238, Sensitivity 77.18%), decision thresholds, and calibration caveats. |
+| [`limitations.md`](./limitations.md) | Detailed analysis of clinical, calibration, whole-image classification, adult-to-pediatric domain shift, and Grad-CAM interpretability constraints. |
+| [`portfolio_demo.md`](./portfolio_demo.md) | Detailed 3 to 5 minute live demonstration walkthrough with reproducible PowerShell commands, expected console outputs, and visual checkpoint verifications. |
+| [`portfolio_presentation.md`](./portfolio_presentation.md) | Comprehensive 12-slide portfolio and academic review presentation deck with detailed speaker notes, architectural breakdowns, and reviewer Q&A preparation. |
 
 ---
 
-## 🛠 Documentation Guidelines
-- **Living Documentation**: Every time a module, pipeline, or model is implemented or updated, the relevant files in this folder are revised.
-- **Verification-First**: Every implementation entry includes concrete validation criteria (unit tests, output checks, benchmark comparisons) to ensure correctness before progression.
-- **Technical Rigor**: Documents maintain detailed mathematical formulations, architectural diagrams, and explicit data schemas.
+## Standards and Governance
 
+1. Technical Rigor: All metrics reported across documentation match serialized evaluation records in `outputs/reports/` with zero synthetic performance fabrication.
+2. Clinical Disclaimers: All documents maintain prominent regulatory notices that this system is an educational research prototype and is not FDA-cleared or clinically validated for diagnostic decision support.
+3. Privacy and PHI: Documentation contains zero Protected Health Information (PHI). All sample outputs employ synthetic case identifiers.

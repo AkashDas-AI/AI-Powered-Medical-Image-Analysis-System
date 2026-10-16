@@ -86,3 +86,8 @@ outputs/plots/*.pdf
 # Personal screenshots and local captures (excluded from repository)
 *01_github_repository*
 
+# Personal interview preparation and private study guides (excluded from repository)
+*interview*
+docs/interview_*.md
+
+
