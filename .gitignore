@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing and Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Scratch and Temporary files
+scratch/
+tmp/
+temp/
+*.log
+
+# Large Medical Datasets (DO NOT COMMIT RAW OR PROCESSED DATASETS)
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/README.md
+*.dcm
+*.dicom
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Model Checkpoints and Serialized Weights
+models/*.h5
+models/*.keras
+models/*.tflite
+models/*.pt
+models/*.pth
+models/*.onnx
+!models/.gitkeep
+!models/README.md
+
+# Generated Outputs and Reports
+outputs/reports/*.json
+outputs/reports/*.csv
+outputs/plots/*.png
+outputs/plots/*.jpg
+outputs/plots/*.pdf
+!outputs/reports/.gitkeep
+!outputs/plots/.gitkeep
+!outputs/README.md
